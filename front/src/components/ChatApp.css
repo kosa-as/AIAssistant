@@ -1,0 +1,18 @@
+/* src/components/ChatApp.css */
+.chat-app {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+.hover-area {
+  width: 10px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: transparent;
+  cursor: pointer;
+}
