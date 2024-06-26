@@ -1,6 +1,6 @@
 from dashscope import Generation
 from dashscope.api_entities.dashscope_response import Role
-
+# key : sk-0461a77a939c47d18fb062e7ec81f876
 messages = []
 
 while True:
