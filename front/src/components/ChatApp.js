@@ -25,6 +25,11 @@ const ChatApp = () => {
     setSidebarFixed(!isSidebarFixed);
   };
 
+  const getSidebarClickList = (list) => {
+    console.log(list)
+    setSidebarClickList(list)
+  }
+  const [sidebarClickList, setSidebarClickList] = useState([]);
   return (
     <div className="chat-app">
       <div className="hover-area" onMouseEnter={handleMouseEnter}></div>
@@ -34,8 +39,12 @@ const ChatApp = () => {
         toggleFixed={toggleSidebarFixed}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        onGetSidebarClickList={getSidebarClickList}
       />
-      <ChatWindow isSidebarVisible={isSidebarVisible} />
+      <ChatWindow
+          isSidebarVisible={isSidebarVisible}
+          lists={sidebarClickList}
+      />
     </div>
   );
 };
