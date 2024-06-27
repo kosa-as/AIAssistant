@@ -4,22 +4,6 @@ import './Sidebar.css';
 import {v4 as uuidV4} from 'uuid';
 import dayjs from "dayjs";
 
-const list = [
-  {
-    historyKey : uuidV4(),
-    title : 'man',
-    communicationList : ['hello','world',],
-    time : 'YY-MM-DD'
-  },
-
-  {
-    historyKey : uuidV4(),
-    title : 'woman',
-    communicationList : ['hei','word',],
-    time : 'YY-MM-DD'
-  }
-]
-
 
 const Sidebar = ({ isVisible, isFixed, toggleFixed, onMouseEnter, onMouseLeave ,onGetSidebarClickList}) => {
 
@@ -52,8 +36,24 @@ const Sidebar = ({ isVisible, isFixed, toggleFixed, onMouseEnter, onMouseLeave ,
       }
     ]
     onGetSidebarClickList(list);
-
   }
+
+  const list = [
+      {
+        historyKey : uuidV4(),
+        title : 'first',
+        communicationList :
+        ['qweqwrfdsas','qewrqwqrrqw',],
+        time : 'YY-MM-DD'
+      },
+      {
+        historyKey : uuidV4(),
+        title : 'second',
+        communicationList :
+        ['qweqwrfdsas','qewrqwqrrqw',],
+        time : 'YY-MM-DD'
+      }
+  ]
 
   const [history, setHistory] = useState(list)
   return (
